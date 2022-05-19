@@ -3,8 +3,13 @@ module.exports = {
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
+  darkMode: "class",
   theme: {
-    extend: {},
+    container: { center: true, padding: "12px" },
   },
-  plugins: [],
+  plugins: [
+    function ({ addVariant }) {
+      addVariant("child-svg", "& svg");
+    },
+  ],
 };
