@@ -1,319 +1,625 @@
 export const searchData = {
   results: [
     {
-      title: "Next.js by Vercel - The React Framework",
-      link: "https://nextjs.org/",
+      title: "Electric Cars, Solar & Clean Energy | Tesla Other Europe",
+      link: "https://www.tesla.com/en_eu",
       description: "",
       additional_links: [
         {
-          text: "Next.js by Vercel - The React Frameworkhttps://nextjs.org",
-          href: "https://nextjs.org/",
+          text: "Electric Cars, Solar & Clean Energy | Tesla Other Europehttps://www.tesla.com › en_eu",
+          href: "https://www.tesla.com/en_eu",
         },
         {
-          text: "Documentation",
-          href: "https://nextjs.org/docs",
+          text: "Tesla Ireland",
+          href: "https://www.tesla.com/en_ie",
         },
         {
-          text: "Create a Next.js App",
-          href: "https://nextjs.org/learn/basics/create-nextjs-app",
+          text: "Model 3 | Tesla Ireland",
+          href: "https://www.tesla.com/en_ie/model3",
         },
         {
-          text: "Learn",
-          href: "https://nextjs.org/learn/foundations/about-nextjs",
+          text: "Model S",
+          href: "https://www.tesla.com/models",
         },
         {
-          text: "Examples",
-          href: "https://nextjs.org/examples",
+          text: "Dublin",
+          href: "https://www.tesla.com/findus/location/store/dublinsandyford",
+        },
+      ],
+      cite: {
+        domain: "https://www.tesla.com › en_eu",
+        span: " › en_eu",
+      },
+    },
+    {
+      title: "Electric Cars, Solar & Clean Energy | Tesla Other Europe",
+      link: "https://www.tesla.com/en_eu",
+      description:
+        "Tesla is accelerating the world's transition to sustainable energy with ...",
+      additional_links: [
+        {
+          text: "Electric Cars, Solar & Clean Energy | Tesla Other Europehttps://www.tesla.com › en_eu",
+          href: "https://www.tesla.com/en_eu",
+        },
+      ],
+      cite: {
+        domain: "https://www.tesla.com › en_eu",
+        span: " › en_eu",
+      },
+    },
+    {
+      title: "Tesla, Inc. - Wikipedia",
+      link: "https://en.wikipedia.org/wiki/Tesla,_Inc.",
+      description:
+        "Tesla, Inc is an American automotive and clean energy company based in Austin, Texas. Tesla designs and manufactures electric vehicles (electric cars and ... Owner:  : Elon Musk‎ (17%);‎ Total assets:  US$62.1 billion (2021) Products:  Model S; ‎Model 3‎; ‎Model X‎; ‎Model Y‎; ...‎ Total equity:  US$30.2 billion (2021)",
+      additional_links: [
+        {
+          text: "Tesla, Inc. - Wikipediahttps://en.wikipedia.org › wiki › Tesla,_Inc",
+          href: "https://en.wikipedia.org/wiki/Tesla,_Inc.",
+        },
+        {
+          text: "Elon Musk",
+          href: "http://en.wikipedia.org/wiki/Elon_Musk",
+        },
+        {
+          text: "Model S",
+          href: "http://en.wikipedia.org/wiki/Tesla_Model_S",
+        },
+        {
+          text: "Model 3",
+          href: "http://en.wikipedia.org/wiki/Tesla_Model_3",
+        },
+        {
+          text: "Model X",
+          href: "http://en.wikipedia.org/wiki/Tesla_Model_X",
+        },
+        {
+          text: "Model Y",
+          href: "http://en.wikipedia.org/wiki/Tesla_Model_Y",
+        },
+        {
+          text: "Tesla Model Y",
+          href: "https://en.wikipedia.org/wiki/Tesla_Model_Y",
+        },
+        {
+          text: "Tesla Supercharger",
+          href: "https://en.wikipedia.org/wiki/Tesla_Supercharger",
+        },
+        {
+          text: "Tesla Autopilot",
+          href: "https://en.wikipedia.org/wiki/Tesla_Autopilot",
+        },
+        {
+          text: "Tesla Megapack",
+          href: "https://en.wikipedia.org/wiki/Tesla_Megapack",
+        },
+        {
+          text: "",
+          href: "https://en.wikipedia.org/wiki/Tesla,_Inc.",
+        },
+        {
+          text: "Nikola Tesla - Wikipediahttps://en.wikipedia.org › wiki › Nikola_Tesla",
+          href: "https://en.wikipedia.org/wiki/Nikola_Tesla",
+        },
+        {
+          text: "New York City",
+          href: "http://en.wikipedia.org/wiki/New_York_City",
+        },
+        {
+          text: "Graz University of Technology",
+          href: "http://en.wikipedia.org/wiki/Graz_University_of_Technology",
+        },
+        {
+          text: "Smiljan",
+          href: "http://en.wikipedia.org/wiki/Smiljan",
+        },
+        {
+          text: "Austrian Empire",
+          href: "http://en.wikipedia.org/wiki/Austrian_Empire",
+        },
+        {
+          text: "Order of St. Sava",
+          href: "http://en.wikipedia.org/wiki/Order_of_St._Sava",
+        },
+        {
+          text: "Governm...",
+          href: "http://en.wikipedia.org/wiki/Government_of_Serbia",
+        },
+        {
+          text: "",
+          href: "https://en.wikipedia.org/wiki/Nikola_Tesla",
+        },
+      ],
+      cite: {
+        domain: "https://en.wikipedia.org › wiki › Tesla,_Inc",
+        span: " › wiki › Tesla,_Inc",
+      },
+    },
+    {
+      title: "Tesla, Inc. - Wikipedia",
+      link: "https://en.wikipedia.org/wiki/Tesla,_Inc.",
+      description:
+        "Tesla, Inc. - Wikipediahttps://en.wikipedia.org › wiki › Tesla,_Inchttps://en.wikipedia.org › wiki › Tesla,_IncTesla, Inc is an American automotive and clean energy company based in Austin, Texas. Tesla designs and manufactures electric vehicles (electric cars and ...Owner: : Elon Musk‎ (17%);‎Total assets: US$62.1 billion (2021)Products: Model S; ‎Model 3‎; ‎Model X‎; ‎Model Y‎; ...‎Total equity: US$30.2 billion (2021)‎Tesla Model Y · ‎Tesla Supercharger · ‎Tesla Autopilot · ‎Tesla Megapack",
+      additional_links: [
+        {
+          text: "Tesla, Inc. - Wikipediahttps://en.wikipedia.org › wiki › Tesla,_Inc",
+          href: "https://en.wikipedia.org/wiki/Tesla,_Inc.",
+        },
+        {
+          text: "Elon Musk",
+          href: "http://en.wikipedia.org/wiki/Elon_Musk",
+        },
+        {
+          text: "Model S",
+          href: "http://en.wikipedia.org/wiki/Tesla_Model_S",
+        },
+        {
+          text: "Model 3",
+          href: "http://en.wikipedia.org/wiki/Tesla_Model_3",
+        },
+        {
+          text: "Model X",
+          href: "http://en.wikipedia.org/wiki/Tesla_Model_X",
+        },
+        {
+          text: "Model Y",
+          href: "http://en.wikipedia.org/wiki/Tesla_Model_Y",
+        },
+        {
+          text: "Tesla Model Y",
+          href: "https://en.wikipedia.org/wiki/Tesla_Model_Y",
+        },
+        {
+          text: "Tesla Supercharger",
+          href: "https://en.wikipedia.org/wiki/Tesla_Supercharger",
+        },
+        {
+          text: "Tesla Autopilot",
+          href: "https://en.wikipedia.org/wiki/Tesla_Autopilot",
+        },
+        {
+          text: "Tesla Megapack",
+          href: "https://en.wikipedia.org/wiki/Tesla_Megapack",
+        },
+        {
+          text: "",
+          href: "https://en.wikipedia.org/wiki/Tesla,_Inc.",
+        },
+      ],
+      cite: {
+        domain: "https://en.wikipedia.org › wiki › Tesla,_Inc",
+        span: " › wiki › Tesla,_Inc",
+      },
+    },
+    {
+      title: "Nikola Tesla - Wikipedia",
+      link: "https://en.wikipedia.org/wiki/Nikola_Tesla",
+      description:
+        "Nikola Tesla - Wikipediahttps://en.wikipedia.org › wiki › Nikola_Teslahttps://en.wikipedia.org › wiki › Nikola_TeslaNikola Tesla was a Serbian-American inventor, electrical engineer, mechanical engineer, and futurist best known for his contributions to the design of the ...Died: 7 January 1943 (aged 86); New York City‎, ...‎Education: Graz University of Technology ...‎Born: 10 July 1856; Smiljan‎, ‎Austrian Empire‎ ...‎Awards: > Order of St. Sava‎, II Class, ‎Governm...‎",
+      additional_links: [
+        {
+          text: "Nikola Tesla - Wikipediahttps://en.wikipedia.org › wiki › Nikola_Tesla",
+          href: "https://en.wikipedia.org/wiki/Nikola_Tesla",
+        },
+        {
+          text: "New York City",
+          href: "http://en.wikipedia.org/wiki/New_York_City",
+        },
+        {
+          text: "Graz University of Technology",
+          href: "http://en.wikipedia.org/wiki/Graz_University_of_Technology",
+        },
+        {
+          text: "Smiljan",
+          href: "http://en.wikipedia.org/wiki/Smiljan",
+        },
+        {
+          text: "Austrian Empire",
+          href: "http://en.wikipedia.org/wiki/Austrian_Empire",
+        },
+        {
+          text: "Order of St. Sava",
+          href: "http://en.wikipedia.org/wiki/Order_of_St._Sava",
+        },
+        {
+          text: "Governm...",
+          href: "http://en.wikipedia.org/wiki/Government_of_Serbia",
+        },
+        {
+          text: "",
+          href: "https://en.wikipedia.org/wiki/Nikola_Tesla",
+        },
+      ],
+      cite: {
+        domain: "https://en.wikipedia.org › wiki › Nikola_Tesla",
+        span: " › wiki › Nikola_Tesla",
+      },
+    },
+    {
+      title: "Tesla (@Tesla) · Twitter",
+      link: "https://twitter.com/Tesla?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor",
+      description: "",
+      cite: {},
+    },
+    {
+      title: "Used Tesla cars for sale in Dublin on Carzone",
+      link: "https://www.carzone.ie/used-cars/ireland/dublin/tesla",
+      description:
+        "45 results — Browse used Tesla vehicles in Dublin below or use filters if you are looking for specific features.",
+      additional_links: [
+        {
+          text: "Used Tesla cars for sale in Dublin on Carzonehttps://www.carzone.ie › used-cars › ireland › tesla",
+          href: "https://www.carzone.ie/used-cars/ireland/dublin/tesla",
+        },
+      ],
+      cite: {
+        domain: "https://www.carzone.ie › used-cars › ireland › tesla",
+        span: " › used-cars › ireland › tesla",
+      },
+    },
+    {
+      title:
+        "Tesla, Inc. (TSLA) Stock Price, News, Quote & History - Yahoo ...",
+      link: "https://finance.yahoo.com/quote/TSLA/",
+      description:
+        "Find the latest Tesla, Inc. (TSLA) stock quote, history, news and other vital information to help you with your stock trading and investing.",
+      additional_links: [
+        {
+          text: "Tesla, Inc. (TSLA) Stock Price, News, Quote & History - Yahoo ...https://finance.yahoo.com › quote › TSLA",
+          href: "https://finance.yahoo.com/quote/TSLA/",
+        },
+      ],
+      cite: {
+        domain: "https://finance.yahoo.com › quote › TSLA",
+        span: " › quote › TSLA",
+      },
+    },
+    {
+      title: "Tesla | The Irish Times",
+      link: "https://www.irishtimes.com/topics/topics-7.1213540?article=true&tag_company=Tesla",
+      description:
+        "Tesla lost $126 billion (€118 billion) in value on Tuesday amid investor concerns that chief executive Elon Musk may have to sell shares to fund his $(...).",
+      additional_links: [
+        {
+          text: "Tesla | The Irish Timeshttps://www.irishtimes.com › topics › topics-7.1213540",
+          href: "https://www.irishtimes.com/topics/topics-7.1213540?article=true&tag_company=Tesla",
+        },
+      ],
+      cite: {
+        domain: "https://www.irishtimes.com › topics › topics-7.1213540",
+        span: " › topics › topics-7.1213540",
+      },
+    },
+    {
+      title: "Tesla Inc TSLA:NASDAQ - Stock Price, Quote and News - CNBC",
+      link: "https://www.cnbc.com/quotes/TSLA",
+      description:
+        "Get Tesla Inc (TSLA:NASDAQ) real-time stock quotes, news, price and financial information from CNBC.",
+      additional_links: [
+        {
+          text: "Tesla Inc TSLA:NASDAQ - Stock Price, Quote and News - CNBChttps://www.cnbc.com › quotes › TSLA",
+          href: "https://www.cnbc.com/quotes/TSLA",
+        },
+      ],
+      cite: {
+        domain: "https://www.cnbc.com › quotes › TSLA",
+        span: " › quotes › TSLA",
+      },
+    },
+    {
+      title: "Tesla Electric Vehicles: Reviews, Pricing, and Specs",
+      link: "https://www.caranddriver.com/tesla",
+      description:
+        "Almost on its own, Tesla has proven that electric vehicles can be desirable, combining outstanding performance and high-tech interiors with usable driving ...",
+      additional_links: [
+        {
+          text: "Tesla Electric Vehicles: Reviews, Pricing, and Specshttps://www.caranddriver.com › tesla",
+          href: "https://www.caranddriver.com/tesla",
+        },
+        {
+          text: "",
+          href: "https://www.caranddriver.com/tesla",
+        },
+      ],
+      cite: {
+        domain: "https://www.caranddriver.com › tesla",
+        span: " › tesla",
+      },
+    },
+    {
+      title: "Tesla News & Reviews | Auto Express",
+      link: "https://www.autoexpress.co.uk/tesla",
+      description:
+        "15 Tesla Supercharger sites open to non-Tesla vehicles in the UK. Pilot scheme to open up Tesla-only charging network to all electric cars lands at selected ...",
+      additional_links: [
+        {
+          text: "Tesla News & Reviews | Auto Expresshttps://www.autoexpress.co.uk › tesla",
+          href: "https://www.autoexpress.co.uk/tesla",
+        },
+        {
+          text: "",
+          href: "https://www.autoexpress.co.uk/tesla",
+        },
+      ],
+      cite: {
+        domain: "https://www.autoexpress.co.uk › tesla",
+        span: " › tesla",
+      },
+    },
+    {
+      title:
+        "Tesla, Inc. | History, Cars, Elon Musk, & Facts - Encyclopedia ...",
+      link: "https://www.britannica.com/topic/Tesla-Motors",
+      description:
+        "Tesla, Inc., formerly (2003–17) Tesla Motors, American manufacturer of electric automobiles, solar panels, and batteries for cars and home power storage.",
+      additional_links: [
+        {
+          text: "Tesla, Inc. | History, Cars, Elon Musk, & Facts - Encyclopedia ...https://www.britannica.com › ... › Banking & Business",
+          href: "https://www.britannica.com/topic/Tesla-Motors",
+        },
+      ],
+      cite: {
+        domain: "https://www.britannica.com › ... › Banking & Business",
+        span: " › ... › Banking & Business",
+      },
+    },
+    {
+      title: "Electrek - EV and Tesla News, Green Energy, Ebikes, and ...",
+      link: "https://electrek.co/",
+      description:
+        "Electrek - EV and Tesla News, Green Energy, Ebikes, and ...https://electrek.cohttps://electrek.co",
+      additional_links: [
+        {
+          text: "Electrek - EV and Tesla News, Green Energy, Ebikes, and ...https://electrek.co",
+          href: "https://electrek.co/",
+        },
+        {
+          text: "",
+          href: "https://electrek.co/",
         },
       ],
       cite: {},
     },
     {
-      title: "Next.js by Vercel - The React Framework",
-      link: "https://nextjs.org/",
+      title: "Tesla Model 3 Car Hire - Dublin - Budget Car Rental Ireland",
+      link: "https://www.budget.ie/electric-cars/tesla-model-3-car-hire/",
       description:
-        "Production grade React applications that scale. The world's leading companies use Next.js by Vercel to build static and dynamic websites and web ...",
+        "Rent a Tesla Model 3 in Dublin Airport from Budget Car Rental Ireland. Drive in style and save on fuel costs with Tesla car hire.",
       additional_links: [
         {
-          text: "Next.js by Vercel - The React Frameworkhttps://nextjs.org",
-          href: "https://nextjs.org/",
-        },
-      ],
-      cite: {},
-    },
-    {
-      title: "Next.js - Wikipedia",
-      link: "https://en.wikipedia.org/wiki/Next.js",
-      description:
-        "Next.js is an open-source web development framework built on top of Node.js enabling React based web applications functionalities such as server-side ...Stable release: 12.1.0 / 17 February 2022; 3 m...Initial release: October 25, 2016; 5 years agoOriginal author(s): Guillermo RauchPlatform: Web platform",
-      additional_links: [
-        {
-          text: "Next.js - Wikipediahttps://en.wikipedia.org › wiki › Next",
-          href: "https://en.wikipedia.org/wiki/Next.js",
+          text: "Tesla Model 3 Car Hire - Dublin - Budget Car Rental Irelandhttps://www.budget.ie › electric-cars › tesla-model-3-ca...",
+          href: "https://www.budget.ie/electric-cars/tesla-model-3-car-hire/",
         },
         {
-          text: "Web platform",
-          href: "http://en.wikipedia.org/wiki/Web_platform",
+          text: "",
+          href: "https://www.budget.ie/electric-cars/tesla-model-3-car-hire/",
         },
       ],
       cite: {
-        domain: "https://en.wikipedia.org › wiki › Next",
-        span: " › wiki › Next",
+        domain: "https://www.budget.ie › electric-cars › tesla-model-3-ca...",
+        span: " › electric-cars › tesla-model-3-ca...",
       },
     },
     {
-      title: "vercel/next.js: The React Framework - GitHub",
-      link: "https://github.com/vercel/next.js/",
+      title: "Tesla | LinkedIn",
+      link: "https://www.linkedin.com/company/tesla-motors",
       description:
-        "The Next.js community can be found on GitHub Discussions, where you can ask questions, voice ideas, and share your projects. To chat with other community ...",
+        "Tesla. Motor Vehicle Manufacturing. Austin, Texas 10,049,763 followers. Tesla's mission is to accelerate the world's transition to sustainable energy.",
       additional_links: [
         {
-          text: "vercel/next.js: The React Framework - GitHubhttps://github.com › vercel › next",
-          href: "https://github.com/vercel/next.js/",
+          text: "Tesla | LinkedInhttps://www.linkedin.com › company › tesla-motors",
+          href: "https://www.linkedin.com/company/tesla-motors",
         },
       ],
       cite: {
-        domain: "https://github.com › vercel › next",
-        span: " › vercel › next",
+        domain: "https://www.linkedin.com › company › tesla-motors",
+        span: " › company › tesla-motors",
       },
     },
     {
-      title: "Get Started with Next.js – The React Library Your Project Needs",
-      link: "https://www.freecodecamp.org/news/nextjs-tutorial/",
+      title: "Tesla | Technology | The Guardian",
+      link: "https://www.theguardian.com/technology/tesla",
       description:
-        "14 Jan 2022 — What is Next.js? The ultimate tool for any React developer to learn and improve their own projects is, without a doubt, Next.js.",
+        "Tesla is an automotive and energy storage company that designs, manufactures, and sells electric cars, electric vehicle powertrain components, ...",
       additional_links: [
         {
-          text: "Get Started with Next.js – The React Library Your Project Needshttps://www.freecodecamp.org › news › nextjs-tutorial",
-          href: "https://www.freecodecamp.org/news/nextjs-tutorial/",
+          text: "Tesla | Technology | The Guardianhttps://www.theguardian.com › technology › tesla",
+          href: "https://www.theguardian.com/technology/tesla",
         },
       ],
       cite: {
-        domain: "https://www.freecodecamp.org › news › nextjs-tutorial",
-        span: " › news › nextjs-tutorial",
+        domain: "https://www.theguardian.com › technology › tesla",
+        span: " › technology › tesla",
       },
     },
     {
-      title: "The Story of Next.js - YouTube",
-      link: "https://www.youtube.com/watch?v=BILxV_vrZO0",
-      description: "12:13 YouTube uidotdev 1 month ago 1 month ago",
+      title: "Tesla (@teslamotors) • Instagram photos and videos",
+      link: "https://www.instagram.com/teslamotors/?hl=en",
+      description:
+        "Tesla. electric cars, giant batteries and solar. www.tesla.com. Impact Report's profile picture. Impact Report. Cyber Rodeo's profile picture. Cyber Rodeo.",
       additional_links: [
         {
-          text: "The Story of Next.js - YouTubehttps://www.youtube.com › watch",
-          href: "https://www.youtube.com/watch?v=BILxV_vrZO0",
-        },
-        {
-          text: "12:13",
-          href: "https://www.youtube.com/watch?v=BILxV_vrZO0",
+          text: "Tesla (@teslamotors) • Instagram photos and videoshttps://www.instagram.com › teslamotors",
+          href: "https://www.instagram.com/teslamotors/?hl=en",
         },
       ],
       cite: {
-        domain: "https://www.youtube.com › watch",
-        span: " › watch",
+        domain: "https://www.instagram.com › teslamotors",
+        span: " › teslamotors",
       },
     },
     {
-      title: "Getting Started With Next.js - Smashing Magazine",
-      link: "https://www.smashingmagazine.com/2020/10/getting-started-with-next-js/",
+      title: "'Elon Musk's Crash Course': 3 key arguments from the Tesla ...",
+      link: "https://www.washingtonpost.com/arts-entertainment/2022/05/20/elon-musk-tesla-crash-course/",
       description:
-        "22 Oct 2020 — Next.js is a React framework that is bound to ease your life as a React developer by abstracting away the common and redundant tasks (such ...",
+        "21 hours ago — Tesla CEO Elon Musk has long been fond of emphasizing that traffic deaths would decrease if driving weren't in the all-too-human hands of, well, ...",
       additional_links: [
         {
-          text: "Getting Started With Next.js - Smashing Magazinehttps://www.smashingmagazine.com › 2020/10 › gettin...",
-          href: "https://www.smashingmagazine.com/2020/10/getting-started-with-next-js/",
+          text: "'Elon Musk's Crash Course': 3 key arguments from the Tesla ...https://www.washingtonpost.com › 2022/05/20 › elon-...",
+          href: "https://www.washingtonpost.com/arts-entertainment/2022/05/20/elon-musk-tesla-crash-course/",
         },
       ],
       cite: {
-        domain: "https://www.smashingmagazine.com › 2020/10 › gettin...",
-        span: " › 2020/10 › gettin...",
+        domain: "https://www.washingtonpost.com › 2022/05/20 › elon-...",
+        span: " › 2022/05/20 › elon-...",
       },
     },
     {
-      title: "Next.js; what is it and why do we use it?",
-      link: "https://www.clock.co.uk/insight/next-js-what-is-it-and-why-do-we-use-it",
+      title: "Tesla - Latest New Models and Vehicle Line-Up - MotorTrend",
+      link: "https://www.motortrend.com/cars/tesla/",
       description:
-        "Quite simply, Next.js is a React framework for developing single page Javascript applications. The benefits of this framework are numerous, both for our clients ...",
+        "What new Tesla should you buy? With rankings, reviews, and specs of Tesla vehicles, MotorTrend is here to help you find your perfect car.",
       additional_links: [
         {
-          text: "Next.js; what is it and why do we use it?https://www.clock.co.uk › insight › next-js-what-is-it-an...",
-          href: "https://www.clock.co.uk/insight/next-js-what-is-it-and-why-do-we-use-it",
+          text: "Tesla - Latest New Models and Vehicle Line-Up - MotorTrendhttps://www.motortrend.com › Best Cars",
+          href: "https://www.motortrend.com/cars/tesla/",
         },
       ],
       cite: {
-        domain: "https://www.clock.co.uk › insight › next-js-what-is-it-an...",
-        span: " › insight › next-js-what-is-it-an...",
+        domain: "https://www.motortrend.com › Best Cars",
+        span: " › Best Cars",
       },
     },
     {
-      title: "What is Next JS and Why Should You Use it in 2022? - Pagepro",
-      link: "https://pagepro.co/blog/what-is-nextjs/",
+      title: "Tesla Inc | Financial Times",
+      link: "https://www.ft.com/stream/35edec46-ef7b-4f9b-b85a-25174e6e07fa",
       description:
-        "18 Apr 2022 — Next.js is a JavaScript framework that enables you to build superfast and extremely user-friendly static websites, as well as web applications ...",
+        "Tesla chief executive talks about his ambitions for electric vehicles, Twitter, SpaceX and life on Earth. Save. May 11 2022.",
       additional_links: [
         {
-          text: "What is Next JS and Why Should You Use it in 2022? - Pageprohttps://pagepro.co › blog › what-is-nextjs",
-          href: "https://pagepro.co/blog/what-is-nextjs/",
+          text: "Tesla Inc | Financial Timeshttps://www.ft.com › stream",
+          href: "https://www.ft.com/stream/35edec46-ef7b-4f9b-b85a-25174e6e07fa",
         },
       ],
       cite: {
-        domain: "https://pagepro.co › blog › what-is-nextjs",
-        span: " › blog › what-is-nextjs",
+        domain: "https://www.ft.com › stream",
+        span: " › stream",
       },
     },
     {
-      title: "A Guide to the NextJS Framework - Codemotion Magazine",
-      link: "https://www.codemotion.com/magazine/frontend/a-quick-guide-to-nextjs/",
+      title: "Tesla News and Reviews | InsideEVs",
+      link: "https://insideevs.com/tesla/",
       description:
-        "11 Mar 2022 — The continual state of change that the internet has been under since it became widespread has made good web application development something of ...",
+        "Tesla Vehicles · TeslaCybertruck · TeslaModel Y · TeslaSemi · TeslaModel 3 · TeslaModel S · TeslaModel X · TeslaRoadster · Latest news.",
       additional_links: [
         {
-          text: "A Guide to the NextJS Framework - Codemotion Magazinehttps://www.codemotion.com › Home › Frontend",
-          href: "https://www.codemotion.com/magazine/frontend/a-quick-guide-to-nextjs/",
+          text: "Tesla News and Reviews | InsideEVshttps://insideevs.com › tesla",
+          href: "https://insideevs.com/tesla/",
         },
       ],
       cite: {
-        domain: "https://www.codemotion.com › Home › Frontend",
-        span: " › Home › Frontend",
+        domain: "https://insideevs.com › tesla",
+        span: " › tesla",
       },
     },
     {
-      title: "Next.js (@nextjs) / Twitter",
-      link: "https://twitter.com/nextjs?lang=en",
+      title: "Tesla on the App Store - Apple",
+      link: "https://apps.apple.com/us/app/tesla/id582007913",
       description:
-        "The Next.js router is getting a major upgrade! ◇ Nested routes / layouts ◇ Client and server routing ◇ React 18 features – startTransition, ...",
+        "Read reviews, compare customer ratings, see screenshots, and learn more about Tesla. Download Tesla and enjoy it on your iPhone, iPad, and iPod touch.",
       additional_links: [
         {
-          text: "Next.js (@nextjs) / Twitterhttps://twitter.com › nextjs",
-          href: "https://twitter.com/nextjs?lang=en",
+          text: "Tesla on the App Store - Applehttps://apps.apple.com › app › tesla",
+          href: "https://apps.apple.com/us/app/tesla/id582007913",
         },
       ],
       cite: {
-        domain: "https://twitter.com › nextjs",
-        span: " › nextjs",
+        domain: "https://apps.apple.com › app › tesla",
+        span: " › app › tesla",
+      },
+      g_review_stars:
+        " Rating: 3.8 · ‎7,620 reviews · ‎Free · ‎iOS · ‎Lifestyle",
+    },
+    {
+      title: "TESLA | Department of Energy",
+      link: "https://www.energy.gov/lpo/tesla",
+      description:
+        "With its Model S, Tesla brought the 1st zero-emission, zero-gas, full-size electric vehicle to market, boosting U.S. advanced auto manufacturing.ECONOMIC IMPACT: Permanent U.S. Jobs Su...PROJECT SUMMARY: OwnerCLIMATE BENEFIT: Gallons Of Gasoline Saved ...FINANCIAL SUMMARY: Loan Program",
+      additional_links: [
+        {
+          text: "TESLA | Department of Energyhttps://www.energy.gov › lpo › tesla",
+          href: "https://www.energy.gov/lpo/tesla",
+        },
+      ],
+      cite: {
+        domain: "https://www.energy.gov › lpo › tesla",
+        span: " › lpo › tesla",
       },
     },
     {
-      title: "Next.js on Netlify",
-      link: "https://docs.netlify.com/integrations/frameworks/next-js/",
+      title: "Tesla Inc. Stock Quote (US: Nasdaq) - TSLA - MarketWatch",
+      link: "https://www.marketwatch.com/investing/stock/tsla",
       description:
-        "Next.js is a React-based open source framework that provides a hybrid static / server-side rendered model for enterprise-grade sites and applications.",
+        "Tesla, Inc. engages in the design, development, manufacture, and sale of fully electric vehicles and energy generation and storage systems. It also provides ...",
       additional_links: [
         {
-          text: "Next.js on Netlifyhttps://docs.netlify.com › integrations › frameworks › n...",
-          href: "https://docs.netlify.com/integrations/frameworks/next-js/",
+          text: "Tesla Inc. Stock Quote (US: Nasdaq) - TSLA - MarketWatchhttps://www.marketwatch.com › ... › Stocks › United States",
+          href: "https://www.marketwatch.com/investing/stock/tsla",
         },
       ],
       cite: {
-        domain: "https://docs.netlify.com › integrations › frameworks › n...",
-        span: " › integrations › frameworks › n...",
+        domain: "https://www.marketwatch.com › ... › Stocks › United States",
+        span: " › ... › Stocks › United States",
       },
     },
     {
-      title: "Next.js on Vercel",
-      link: "https://vercel.com/solutions/nextjs",
+      title: "Tesla (TSLA) - Forbes",
+      link: "https://www.forbes.com/companies/tesla/",
       description:
-        "Designed for Next.js. Developed by the team behind Next. · Zero configuration. Vercel takes the zero-configuration mentality of Next.js to the cloud, so you can ...",
+        "Tesla, Inc. engages in the design, development, manufacture, and sale of fully electric vehicles, energy generation and storage systems.Sales: $53.8BVolume: 15,000,531",
       additional_links: [
         {
-          text: "Next.js on Vercelhttps://vercel.com › solutions › nextjs",
-          href: "https://vercel.com/solutions/nextjs",
+          text: "Tesla (TSLA) - Forbeshttps://www.forbes.com › companies › tesla",
+          href: "https://www.forbes.com/companies/tesla/",
         },
       ],
       cite: {
-        domain: "https://vercel.com › solutions › nextjs",
-        span: " › solutions › nextjs",
+        domain: "https://www.forbes.com › companies › tesla",
+        span: " › companies › tesla",
       },
     },
     {
-      title: "Auth0 Next.js SDK Quickstarts: Login",
-      link: "https://auth0.com/docs/quickstart/webapp/nextjs/01-login",
+      title: "Tesla - YouTube",
+      link: "https://www.youtube.com/user/teslamotors",
       description:
-        "This guide demonstrates how to integrate Auth0 with any new or existing Next.js application using the Auth0 Next.js SDK.",
+        "Electric cars, giant batteries and solar. Tesla's mission is to accelerate the world's transition to sustainable energy.",
       additional_links: [
         {
-          text: "Auth0 Next.js SDK Quickstarts: Loginhttps://auth0.com › ... › Regular Web App › Next.js",
-          href: "https://auth0.com/docs/quickstart/webapp/nextjs/01-login",
+          text: "Tesla - YouTubehttps://www.youtube.com › user › teslamotors",
+          href: "https://www.youtube.com/user/teslamotors",
         },
       ],
       cite: {
-        domain: "https://auth0.com › ... › Regular Web App › Next.js",
-        span: " › ... › Regular Web App › Next.js",
+        domain: "https://www.youtube.com › user › teslamotors",
+        span: " › user › teslamotors",
       },
     },
     {
-      title: "Usage with Next.js - SWR",
-      link: "https://swr.vercel.app/docs/with-nextjs",
+      title: "Tesla | Latest Reviews, News & Features | What Car?",
+      link: "https://www.whatcar.com/make/tesla",
       description:
-        "Usage with Next.js. Client Side Data Fetching#. If your page contains frequently updating data, and you don't need to pre-render the data, SWR is a perfect ...",
+        "Tesla is the company that changed the car industry, putting electric cars at the forefront of public conscious – helped by the personality and profile of boss ...",
       additional_links: [
         {
-          text: "Usage with Next.js - SWRhttps://swr.vercel.app › docs › with-nextjs",
-          href: "https://swr.vercel.app/docs/with-nextjs",
+          text: "Tesla | Latest Reviews, News & Features | What Car?https://www.whatcar.com › make › tesla",
+          href: "https://www.whatcar.com/make/tesla",
         },
       ],
       cite: {
-        domain: "https://swr.vercel.app › docs › with-nextjs",
-        span: " › docs › with-nextjs",
-      },
-    },
-    {
-      title: "Next.js | Jamstack",
-      link: "https://jamstack.org/generators/next/",
-      description:
-        "Next.js is a minimalistic framework for server-rendered React applications as well as statically exported React apps.",
-      additional_links: [
-        {
-          text: "Next.js | Jamstackhttps://jamstack.org › generators › next",
-          href: "https://jamstack.org/generators/next/",
-        },
-      ],
-      cite: {
-        domain: "https://jamstack.org › generators › next",
-        span: " › generators › next",
-      },
-    },
-    {
-      title: "Contentful and Next.js: Getting Started",
-      link: "https://www.contentful.com/nextjs-starter-guide/",
-      description:
-        "Next.js is a JavaScript React framework that can be used to build pre-rendered React applications. Along with a stellar developer experience, this framework ...",
-      additional_links: [
-        {
-          text: "Contentful and Next.js: Getting Startedhttps://www.contentful.com › nextjs-starter-guide",
-          href: "https://www.contentful.com/nextjs-starter-guide/",
-        },
-      ],
-      cite: {
-        domain: "https://www.contentful.com › nextjs-starter-guide",
-        span: " › nextjs-starter-guide",
-      },
-    },
-    {
-      title: "Next.js Authentication - Clerk.dev",
-      link: "https://clerk.dev/docs/get-started/nextjs",
-      description:
-        "js application. Clerk provides an NPM library tailored specifically to Next.js authentication, with helpers for React pages, API routes, server-side rendering, ...",
-      additional_links: [
-        {
-          text: "Next.js Authentication - Clerk.devhttps://clerk.dev › docs › get-started › nextjs",
-          href: "https://clerk.dev/docs/get-started/nextjs",
-        },
-      ],
-      cite: {
-        domain: "https://clerk.dev › docs › get-started › nextjs",
-        span: " › docs › get-started › nextjs",
+        domain: "https://www.whatcar.com › make › tesla",
+        span: " › make › tesla",
       },
     },
   ],
   image_results: [],
-  total: 19500000,
+  total: 2260000000,
   answers: [
-    "What is NextJS used for?",
-    "Is NextJS better than Reactjs?",
-    "Is NextJS frontend or backend?",
-    "What is difference between NestJS and NextJS?",
+    "How much is the cheapest Tesla?",
+    "How much is a Tesla in UK?",
+    "What is the total cost of Tesla?",
+    "How much are Teslas in Ireland?",
   ],
-  ts: 2.5832996368408203,
+  ts: 3.50687837600708,
   device_region: "EU",
   device_type: "desktop",
 };

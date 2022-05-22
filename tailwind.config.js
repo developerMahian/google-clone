@@ -10,6 +10,8 @@ module.exports = {
   plugins: [
     function ({ addVariant }) {
       addVariant("child-svg", "& svg");
+      addVariant("child-li", "& > li");
+      addVariant("child", "& > *");
     },
   ],
 };
