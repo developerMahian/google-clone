@@ -5,6 +5,12 @@ import TransComp from "../FramerMotion/TransComp";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { ResultContextProvider } from "../../context/ResultContextProvider";
 
+if (process.env.NODE_ENV === "production") {
+  console.log = () => {};
+  console.error = () => {};
+  console.debug = () => {};
+}
+
 const Layout = ({ children, pageProps }) => {
   const [darkTheme, setDarkTheme] = useState(true);
   const [queryClient] = useState(() => new QueryClient());

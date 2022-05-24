@@ -8,6 +8,10 @@ import NewsTab from "../components/SearchTabs/NewsTab/NewsTab";
 const Home = () => {
   const router = useRouter();
 
+  console.log("hey there....");
+
+  return <></>;
+
   switch (router.query.tab) {
     case "articles":
     case undefined:

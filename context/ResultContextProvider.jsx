@@ -1,6 +1,4 @@
-import { createContext, useContext, useEffect, useState } from "react";
-import { imageData } from "../staticApiData/imagesData";
-import { searchData } from "../staticApiData/searchData";
+import { createContext, useContext, useState } from "react";
 import useDebounce from "../utils/useDebounce";
 
 const ResultContext = createContext();
@@ -9,7 +7,7 @@ const imageBaseUrl = "https://google-image-search1.p.rapidapi.com/v2";
 const videoBaseUrl = "https://bing-video-search1.p.rapidapi.com/videos/search";
 
 export const ResultContextProvider = ({ children }) => {
-  const [searchTerm, setSearchTerm] = useState("Tesla");
+  const [searchTerm, setSearchTerm] = useState("Web Developer");
   const [searchSuggestions, setSearchSuggestions] = useState([]);
   const [sortByTime, setSortByTime] = useState(false);
 
