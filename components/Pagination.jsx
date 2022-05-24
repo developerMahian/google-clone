@@ -5,23 +5,19 @@ import ReactPaginate from "react-paginate";
 const Pagination = ({ results, itemsPerPage, setPageNumber }) => {
   const pageCount = Math.ceil(results.length / itemsPerPage);
 
-  const handlePageClick = ({ selected }) => {
-    setPageNumber(selected);
-  };
-
   return (
     <ReactPaginate
       previousLabel={<FaArrowCircleLeft />}
       nextLabel={<FaArrowCircleRight />}
       breakLabel="..."
-      onPageChange={handlePageClick}
+      onPageChange={({ selected }) => setPageNumber(selected)}
       pageCount={pageCount}
       nextClassName={paginateIconClass}
       previousClassName={paginateIconClass}
       pageLinkClassName={reactPaginateBtnClasses}
-      activeLinkClassName="bg-sky-300 dark:bg-sky-800"
+      activeLinkClassName="!bg-sky-300 dark:!bg-sky-800"
       breakLinkClassName={reactPaginateBtnClasses}
-      disabledClassName="opacity-70 text-red-300 hover:scale-100"
+      disabledClassName="!opacity-60 !text-red-500 hover:!scale-100"
       containerClassName="flex flex-wrap items-center gap-3"
     />
   );

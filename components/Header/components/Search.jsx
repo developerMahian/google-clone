@@ -1,13 +1,14 @@
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 import Autocomplete from "react-autocomplete";
+import { FaSistrix } from "react-icons/fa";
 import { HiSearch } from "react-icons/hi";
-import { useResultContext } from "../../context/ResultContextProvider";
+import { useResultContext } from "../../../context/ResultContextProvider";
 
 const Search = ({ isNavFixed }) => {
   const { searchTerm, setSearchTerm, searchSuggestions } = useResultContext();
 
-  console.log({ searchSuggestions });
+  // console.log({ searchSuggestions });
 
   useEffect(() => {
     const searchInputEl = document.getElementById("headerSearchInput");
@@ -30,11 +31,15 @@ const Search = ({ isNavFixed }) => {
         }
         renderItem={(item, isHighlighted) => (
           <div
+            key={item}
             className={`${
-              isHighlighted && "bg-gray-300 dark:bg-gray-600"
-            } flex items-center gap-4 text-base bg-gray-200 dark:bg-gray-700 dark:text-gray-100 px-4 py-2 transition-colors duration-300 capitalize cursor-pointer`}
+              isHighlighted
+                ? "bg-gray-300 dark:bg-gray-600"
+                : "bg-gray-200 dark:bg-gray-700"
+            } flex items-center gap-4 text-base dark:text-gray-100 px-6 py-2 transition-colors duration-300 capitalize cursor-pointer`}
           >
-            <HiSearch /> {item}
+            <FaSistrix />
+            {item}
           </div>
         )}
         value={searchTerm}

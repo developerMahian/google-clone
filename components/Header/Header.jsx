@@ -2,8 +2,8 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useResultContext } from "../../context/ResultContextProvider";
-import Search from "./Search";
-import Tabs from "./Tabs";
+import Search from "./components/Search";
+import Tabs from "./components/Tabs";
 import { FaMoon, FaSun } from "react-icons/fa";
 
 const Header = ({ toggleTheme, darkTheme }) => {

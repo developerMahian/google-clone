@@ -1,54 +1,44 @@
 import { useEffect, useState } from "react";
 import { useQuery } from "react-query";
 import ReactPaginate from "react-paginate";
-import { useResultContext } from "../../../context/ResultContextProvider";
-import { FaSistrix } from "react-icons/fa";
-import Loading from "../../Loading";
-import { searchData } from "../../../staticApiData/searchData";
+import { useResultContext } from "../../context/ResultContextProvider";
+import Loading from "../Loading";
 import propTypes from "prop-types";
-import Pagination from "./Pagination";
+import Pagination from "../Pagination";
+// import { searchData as data } from "../../staticApiData/searchData";
 
 const ArticlesTab = () => {
   const { debouncedSearchTerm, getResults, setSearchSuggestions } =
     useResultContext();
 
-  // const { isLoading, isError, isSuccess, data } = useQuery(
-  //   ["searchApi", debouncedSearchTerm],
-  //   () => getResults("searchApi", "search"),
-  //   {
-  //     enabled: debouncedSearchTerm.length > 0,
-  //     staleTime: Infinity,
-  //   }
-  // );
+  const { isLoading, isError, isSuccess, data } = useQuery(
+    ["blogSearch", debouncedSearchTerm],
+    () => getResults("searchApi", "search"),
+    {
+      enabled: debouncedSearchTerm.length > 0,
+      staleTime: Infinity,
+    }
+  );
 
-  // console.log({ isLoading, data });
-
-  // if (isLoading) return <Loading />;
-
-  const { results, ts, answers } = searchData;
+  console.log({ isLoading, data });
 
   useEffect(() => {
-    setSearchSuggestions(answers);
-  }, [answers]);
+    setSearchSuggestions(data?.answers || []);
+
+    return () => setSearchSuggestions([]);
+  }, [data]);
+
+  if (isLoading) return <Loading />;
+
+  const { results, ts } = data;
 
   return (
     <section className="container sm:px-5 lg:px-40">
       <span className="inline-block text-xs tracking-wide mt-2 mb-6">
-        About {results.length} results in {ts.toFixed(2) / 50} seconds
+        About {results.length} results in {(ts / 10).toFixed(2)} seconds
       </span>
 
       <ArticlesCollection results={results} />
-
-      <div className="flex flex-wrap gap-x-3 gap-y-2 border-t dark:border-gray-700 pt-7">
-        {answers?.map((answer, index) => (
-          <button
-            key={index}
-            className="w-full md:w-[48%] py-4 px-6 h-fit flex gap-x-3 text-left font-medium bg-gray-200 dark:bg-gray-700 rounded-full"
-          >
-            <FaSistrix className="text-lg mt-[3px]" /> {answer}
-          </button>
-        ))}
-      </div>
     </section>
   );
 };
@@ -76,14 +66,14 @@ const ArticlesCollection = ({ results }) => {
                 target="_blank"
                 rel="noreferrer"
               >
-                <div className="text-sm w-fit">
+                <span className="text-sm">
                   {link.length > 30 ? link.substring(0, 30) : link}
-                </div>
-                <div className="inline text-sky-600 dark:text-sky-300 text-xl group-hover:underline underline-offset-4">
+                </span>
+                <h1 className="text-sky-600 dark:text-sky-300 text-lg sm:text-xl group-hover:underline underline-offset-4">
                   {title}
-                </div>
+                </h1>
               </a>
-              <div className="text-base mt-2">{description}</div>
+              <p className="text-base mt-2">{description}</p>
             </div>
           )
       )}

@@ -8,6 +8,7 @@ module.exports = {
     container: { center: true, padding: "12px" },
   },
   plugins: [
+    require("tailwindcss-debug-screens"),
     function ({ addVariant }) {
       addVariant("child-svg", "& svg");
       addVariant("child-li", "& > li");

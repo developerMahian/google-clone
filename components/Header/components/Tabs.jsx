@@ -1,4 +1,6 @@
+import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
+import propTypes from "prop-types";
 import {
   FaBookReader,
   FaPlayCircle,
@@ -24,11 +26,17 @@ const Tabs = () => (
 );
 
 const TabBtn = ({ children, tabId }) => {
+  const [isTabActive, setIsTabActive] = useState(false);
+
   const router = useRouter();
 
-  const isTabActive =
+  const tabActiveValue =
     router.query.tab === tabId ||
     (router.asPath === "/" && tabId === "articles");
+
+  useEffect(() => {
+    setIsTabActive(tabActiveValue);
+  }, [router.query.tab]);
 
   return (
     <button
@@ -42,6 +50,10 @@ const TabBtn = ({ children, tabId }) => {
       {children}
     </button>
   );
+};
+
+TabBtn.protoType = {
+  tabId: propTypes.string.isRequired,
 };
 
 export default Tabs;

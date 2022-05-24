@@ -1,4 +1,4 @@
-export const imageData = {
+export const imagesData = {
   request: {
     hl: "en",
     query: "Tesla",

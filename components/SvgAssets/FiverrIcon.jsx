@@ -1,4 +1,4 @@
-const Fiverr = () => (
+const FiverrIcon = () => (
   <svg
     height="40"
     width="40"
@@ -15,4 +15,4 @@ const Fiverr = () => (
   </svg>
 );
 
-export default Fiverr;
+export default FiverrIcon;
