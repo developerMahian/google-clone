@@ -29,8 +29,8 @@ export const ResultContextProvider = ({ children }) => {
           headers: {
             "X-User-Agent": "desktop",
             "X-Proxy-Location": "EU",
-            "X-RapidAPI-Host": process.env.SEARCH_API_HOST,
-            "X-RapidAPI-Key": process.env.SEARCH_API_KEY,
+            "X-RapidAPI-Host": process.env.NEXT_PUBLIC_SEARCH_API_HOST,
+            "X-RapidAPI-Key": process.env.NEXT_PUBLIC_SEARCH_API_KEY,
           },
         }
       ).then((res) => res.json());
@@ -39,8 +39,8 @@ export const ResultContextProvider = ({ children }) => {
       return await fetch(`${imageBaseUrl}/?q=${debouncedSearchTerm}&hl=en`, {
         method: "GET",
         headers: {
-          "X-RapidAPI-Host": process.env.IMAGE_API_HOST,
-          "X-RapidAPI-Key": process.env.IMAGE_API_KEY,
+          "X-RapidAPI-Host": process.env.NEXT_PUBLIC_IMAGE_API_HOST,
+          "X-RapidAPI-Key": process.env.NEXT_PUBLIC_IMAGE_API_KEY,
         },
       }).then((res) => res.json());
     } else if (api === "videoApi") {
@@ -51,8 +51,8 @@ export const ResultContextProvider = ({ children }) => {
         {
           method: "GET",
           headers: {
-            "X-RapidAPI-Host": process.env.VIDEO_API_HOST,
-            "X-RapidAPI-Key": process.env.VIDEO_API_KEY,
+            "X-RapidAPI-Host": process.env.NEXT_PUBLIC_VIDEO_API_HOST,
+            "X-RapidAPI-Key": process.env.NEXT_PUBLIC_VIDEO_API_KEY,
           },
         }
       ).then((res) => res.json());
