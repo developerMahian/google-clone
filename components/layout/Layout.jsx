@@ -19,7 +19,11 @@ const Layout = ({ children, pageProps }) => {
     <ResultContextProvider>
       <QueryClientProvider client={queryClient}>
         <div className={darkTheme ? "dark" : "light"}>
-          <div className="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-200 min-h-screen overflow-x-hidden debug-screens">
+          <div
+            className={`bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-200 min-h-screen overflow-x-hidden ${
+              process.env.NODE_ENV !== "production" && "debug-screens"
+            }`}
+          >
             <Header toggleTheme={setDarkTheme} darkTheme={darkTheme} />
             <main className="min-h-[330px]">
               <TransComp>{children}</TransComp>
