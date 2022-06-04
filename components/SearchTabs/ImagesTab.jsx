@@ -5,17 +5,14 @@ import propTypes from "prop-types";
 import { useResultContext } from "../../context/ResultContextProvider";
 import Loading from "../Loading";
 import "lightgallery.js/dist/css/lightgallery.css";
+
 // import { imagesData as data } from "../../staticApiData/imagesData";
 
 const ImagesTab = () => {
-  const {
-    debouncedSearchTerm,
-    getResults,
-    searchSuggestions,
-    setSearchSuggestions,
-  } = useResultContext();
+  const { debouncedSearchTerm, getResults, setSearchSuggestions } =
+    useResultContext();
 
-  const { isLoading, isError, isSuccess, data } = useQuery(
+  const { data, isLoading } = useQuery(
     ["imageApi", debouncedSearchTerm],
     () => getResults("imageApi"),
     {
@@ -47,8 +44,9 @@ const ImagesTab = () => {
       </span>
 
       <LightgalleryProvider lightgallerySettings={{}}>
-        <div className="columns-2 md:columns-3 space-y-4">
-          {images?.map(({ source, image, thumbnail, dominantColor }, index) => (
+        {/* <div className="columns-2 md:columns-3 space-y-4"> */}
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 2xl:grid-cols-4 gap-4">
+          {images?.map(({ source, image, thumbnail }, index) => (
             <div key={index}>
               <PhotoItem
                 group="imageGroup"
@@ -79,11 +77,15 @@ const PhotoItem = ({ imgUrl, alt, thumbUrl, pageUrl, infoText, group }) => (
       </a>
     `}
   >
-    <div className="relative group rounded-lg overflow-hidden cursor-pointer">
+    <div className="relative min-h-[100px] group cursor-pointer">
       <img
         src={imgUrl}
         alt={alt}
-        className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500 z-0"
+        onError={({ currentTarget }) => {
+          currentTarget.onerror = null; // prevents looping
+          // currentTarget.src="image_path_here";
+        }}
+        className="w-full h-full object-cover object-center rounded-lg overflow-hidden group-hover:scale-110 transition-transform duration-500 z-0"
         loading="lazy"
       />
 

@@ -34,7 +34,7 @@ const NewsTab = () => {
     <section className="container sm:px-5 lg:px-36">
       <div className="max-w-3xl flex flex-col sm:flex-row items-center justify-between gap-2 mt-1.5 mb-2.5">
         <span className="inline-block text-xs tracking-wide">
-          About {entries.length} results in {(ts / 10).toFixed(2)} seconds
+          About {entries?.length} results in {(ts / 10).toFixed(2)} seconds
         </span>
 
         <SortingCheck />

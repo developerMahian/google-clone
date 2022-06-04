@@ -1,12 +1,13 @@
 import { useEffect } from "react";
 import { useQuery } from "react-query";
-import propTypes from "prop-types";
-import ReactPlayer from "react-player";
 import numeral from "numeral";
 import TimeAgo from "javascript-time-ago";
 import en from "javascript-time-ago/locale/en.json";
+
 import { useResultContext } from "../../context/ResultContextProvider";
 import Loading from "../Loading";
+import { FaExternalLinkAlt } from "react-icons/fa";
+
 // import { videosData as data } from "../../staticApiData/videosData";
 
 TimeAgo.addLocale(en);
@@ -17,7 +18,7 @@ const VideosTab = () => {
 
   const timeAgo = new TimeAgo("en-US");
 
-  const { isLoading, isError, isSuccess, data } = useQuery(
+  const { data, isLoading } = useQuery(
     ["videoSearch", debouncedSearchTerm],
     () => getResults("videoApi"),
     {
@@ -45,40 +46,51 @@ const VideosTab = () => {
         {value?.map(
           (
             {
-              contentUrl,
+              embedHtml,
+              hostPageUrl,
+              motionThumbnailUrl,
               name: title,
               creator: { name: creatorName },
-              publisher,
               datePublished,
               viewCount,
             },
             index
-          ) => (
-            <div key={index}>
-              <div className="w-[390px] mx-auto">
-                <ReactPlayer
-                  url={contentUrl}
-                  controls={true}
-                  width="100%"
-                  height={220}
-                  style={{ margin: "auto" }}
-                />
+          ) =>
+            embedHtml && (
+              <div key={index}>
+                <div className="w-[390px] mx-auto">
+                  <video
+                    className="w-full max-h-[220px] rounded-lg overflow-hidden cursor-pointer mb-2"
+                    controls={false}
+                    onMouseOver={({ target }) =>
+                      target.setAttribute("controls", true)
+                    }
+                    onMouseOut={({ target }) =>
+                      target.removeAttribute("controls")
+                    }
+                  >
+                    <source src={motionThumbnailUrl} type="video/mp4" />
+                    Can&apos;t support Video playing.
+                  </video>
 
-                <h1 className="text-sky-600 dark:text-sky-300 text-base sm:text-lg tracking-wide mt-2">
-                  {title}
-                </h1>
+                  <h1 className="inline text-sky-600 dark:text-sky-300 text-base sm:text-lg hover:border-b border-sky-600 dark:border-sky-300 tracking-wide">
+                    <a href={hostPageUrl} target="_blank" rel="noreferrer">
+                      {title}{" "}
+                      <FaExternalLinkAlt className="inline-block ml-3 mb-1 text-xs" />
+                    </a>
+                  </h1>
 
-                <div className="text-[13px] opacity-80 tracking-wider">
-                  <div className="uppercase">{creatorName}</div>
-                  <span>{numeral(viewCount).format("0a")} views</span>
-                  <span className="inline-block scale-[0.4] mx-0.5">🟢</span>
-                  <span className="">
-                    {timeAgo.format(new Date(datePublished))}
-                  </span>
+                  <div className="text-[13px] opacity-80 tracking-wider mt-1">
+                    <div className="uppercase">{creatorName}</div>
+                    <span>{numeral(viewCount).format("0a")} views</span>
+                    <span className="inline-block scale-[0.4] mx-0.5">🟢</span>
+                    <span className="">
+                      {timeAgo.format(new Date(datePublished))}
+                    </span>
+                  </div>
                 </div>
               </div>
-            </div>
-          )
+            )
         )}
       </div>
     </section>

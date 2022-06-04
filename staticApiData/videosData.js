@@ -32,10 +32,13 @@ export const videosData = {
       },
       isAccessibleForFree: true,
       isFamilyFriendly: true,
-      contentUrl: "https://www.youtube.com/watch?v=7-4yOx1CnXE",
-      hostPageUrl: "https://www.youtube.com/watch?v=7-4yOx1CnXE",
+      contentUrl:
+        "https://www.tiktok.com/@syedsalarkazmi/video/7104277517174918426",
+      hostPageUrl:
+        "https://www.tiktok.com/@syedsalarkazmi/video/7104277517174918426",
       encodingFormat: "h264",
-      hostPageDisplayUrl: "https://www.youtube.com/watch?v=7-4yOx1CnXE",
+      hostPageDisplayUrl:
+        "https://www.tiktok.com/@syedsalarkazmi/video/7104277517174918426",
       width: 1280,
       height: 720,
       duration: "PT2M58S",

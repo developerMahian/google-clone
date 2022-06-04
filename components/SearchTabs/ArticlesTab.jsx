@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { useQuery } from "react-query";
-import ReactPaginate from "react-paginate";
 import { useResultContext } from "../../context/ResultContextProvider";
 import Loading from "../Loading";
 import propTypes from "prop-types";
@@ -11,7 +10,7 @@ const ArticlesTab = () => {
   const { debouncedSearchTerm, getResults, setSearchSuggestions } =
     useResultContext();
 
-  const { isLoading, isError, isSuccess, data } = useQuery(
+  const { data, isLoading } = useQuery(
     ["blogSearch", debouncedSearchTerm],
     () => getResults("searchApi", "search"),
     {

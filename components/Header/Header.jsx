@@ -1,9 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useResultContext } from "../../context/ResultContextProvider";
+
 import Search from "./components/Search";
 import Tabs from "./components/Tabs";
+
 import { FaMoon, FaSun } from "react-icons/fa";
 
 const Header = ({ toggleTheme, darkTheme }) => {
@@ -52,10 +53,10 @@ const Header = ({ toggleTheme, darkTheme }) => {
             <div className="flex flex-grow items-center gap-4 md:gap-10">
               <Link href="/">
                 <a
-                  className="hdden sm:block text-xl sm:text-2xl font-extrabold rounded-md dark:text-white whitespace-nowrap"
+                  className="hdden sm:block text-xl sm:text-2xl font-extrabold font-mono rounded-md dark:text-white whitespace-nowrap"
                   onClick={() => router.push({ tab: "search" })}
                 >
-                  gClone
+                  gReact
                 </a>
               </Link>
 
