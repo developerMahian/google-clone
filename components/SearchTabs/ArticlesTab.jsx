@@ -10,15 +10,16 @@ import Loading from "../Loading";
 const ArticlesTab = () => {
 	const { debouncedSearchTerm, getResults, setSearchSuggestions } = useResultContext();
 
-	const { data, isLoading } = useQuery(["blogSearch", debouncedSearchTerm], () => getResults("searchApi", "search"), {
+	const { data, isLoading } = useQuery(["blogSearch", debouncedSearchTerm], () => getResults("searchApi"), {
 		enabled: debouncedSearchTerm.length > 0,
 		staleTime: Infinity,
 	});
 
-	console.info({ isLoading, data });
+	const { results, related_keywords } = data || {};
 
 	useEffect(() => {
-		setSearchSuggestions(data?.answers || []);
+		const keywordList = related_keywords?.keywords?.map((k) => k?.keyword) || [];
+		setSearchSuggestions(keywordList || []);
 		return () => setSearchSuggestions([]);
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [data]);
@@ -26,20 +27,10 @@ const ArticlesTab = () => {
 	if (!debouncedSearchTerm) return <EmptySearchResult />;
 	if (isLoading) return <Loading />;
 
-	const { results, ts } = data;
-
 	return (
 		<section className="container sm:px-5 lg:px-40 pt-2">
-			{results?.length > 0 ? (
-				<>
-					<span className="inline-block text-xs tracking-wide">
-						About {results?.length} results in {(ts / 10).toFixed(2)} seconds
-					</span>
-					<ArticlesCollection results={results} />
-				</>
-			) : (
-				<span className="inline-block text-xs tracking-wide">No results found..</span>
-			)}
+			<span className="inline-block text-xs tracking-wide">About {results?.length || 0} results found..</span>
+			{results?.length > 0 && <ArticlesCollection results={results} />}
 		</section>
 	);
 };
@@ -53,7 +44,7 @@ const ArticlesCollection = ({ results }) => {
 	const itemsPerPage = 10;
 	const itemsVisited = pageNumber * itemsPerPage;
 
-	const displayItems = results?.slice(itemsVisited, itemsVisited + itemsPerPage);
+	const displayItems = results?.slice(itemsVisited, itemsVisited + itemsPerPage) || [];
 
 	return results?.length > 0 ? (
 		<div className="flex flex-col gap-10 max-w-2xl my-6">
@@ -62,7 +53,7 @@ const ArticlesCollection = ({ results }) => {
 					description && (
 						<div key={index}>
 							<a href={link} className="inline-block group" target="_blank" rel="noreferrer">
-								<span className="text-sm">{link.length > 30 ? link.substring(0, 30) : link}</span>
+								<span className="text-sm">{link?.length > 30 ? link.substring(0, 30) : link}</span>
 								<h1 className="text-sky-600 dark:text-sky-300 text-lg sm:text-xl group-hover:underline underline-offset-4">{title}</h1>
 							</a>
 							<p className="text-base mt-2">{description}</p>

@@ -1,13 +1,12 @@
 import { useEffect } from "react";
-import { useQuery } from "react-query";
-import { LightgalleryItem, LightgalleryProvider } from "react-lightgallery";
 import propTypes from "prop-types";
-import { useResultContext } from "../../context/ResultContextProvider";
+import { useQuery } from "react-query";
+import "lightgallery.js/dist/css/lightgallery.css";
+import { LightgalleryItem, LightgalleryProvider } from "react-lightgallery";
+
 import Loading from "../Loading";
 import EmptySearchResult from "../EmptySearchResult";
-import "lightgallery.js/dist/css/lightgallery.css";
-
-// import { imagesData as data } from "../../staticApiData/imagesData";
+import { useResultContext } from "../../context/ResultContextProvider";
 
 const ImagesTab = () => {
 	const { debouncedSearchTerm, getResults, setSearchSuggestions } = useResultContext();
@@ -17,38 +16,33 @@ const ImagesTab = () => {
 		staleTime: Infinity,
 	});
 
-	console.info({ isLoading, data });
-
-	const answers = data?.response?.suggestions?.map(({ text }) => text);
+	const { data: images, related_keywords } = data || {};
 
 	useEffect(() => {
-		setSearchSuggestions(answers || []);
+		const keywordList = related_keywords?.keywords?.map((k) => k?.keyword) || [];
+		setSearchSuggestions(keywordList || []);
 		return () => setSearchSuggestions([]);
 	}, [data]);
 
 	if (!debouncedSearchTerm) return <EmptySearchResult />;
 	if (isLoading) return <Loading />;
 
-	const images = data?.response?.images || [];
-
 	return (
 		<section className="container p-3 pt-0 lg:px-32">
-			<span className="inline-block text-xs tracking-wide mt-3 mb-2.5">
-				About {images.length} results in {(Math.random() + 1).toFixed(2)} seconds
-			</span>
+			<span className="inline-block text-xs tracking-wide mt-3 mb-2.5">About {images.length} results found..</span>
 
 			<LightgalleryProvider lightgallerySettings={{}}>
 				{/* <div className="columns-2 md:columns-3 space-y-4"> */}
 				<div className="grid sm:grid-cols-2 md:grid-cols-3 2xl:grid-cols-4 gap-4">
-					{images?.map(({ source, image, thumbnail }, index) => (
-						<div key={index}>
+					{images?.map(({ source, url, source_url, thumbnail_url }) => (
+						<div key={url}>
 							<PhotoItem
 								group="imageGroup"
-								imgUrl={image?.url}
-								alt={source?.title + " - Image"}
-								thumbUrl={thumbnail?.url}
-								pageUrl={source?.page}
-								infoText={source?.title}
+								imgUrl={url}
+								alt={source + " - Image"}
+								thumbUrl={thumbnail_url}
+								pageUrl={source_url}
+								infoText={source}
 							/>
 						</div>
 					))}

@@ -2,8 +2,8 @@ import { createContext, useContext, useState } from "react";
 import useDebounce from "../utils/useDebounce";
 
 const ResultContext = createContext();
-const searchBaseUrl = "https://google-search3.p.rapidapi.com/api/v1";
-const imageBaseUrl = "https://google-image-search1.p.rapidapi.com/v2";
+const searchBaseUrl = "https://google-search74.p.rapidapi.com";
+const imageBaseUrl = "https://real-time-image-search.p.rapidapi.com/search";
 const videoBaseUrl = "https://bing-video-search1.p.rapidapi.com/videos/search";
 
 export const ResultContextProvider = ({ children }) => {
@@ -18,7 +18,7 @@ export const ResultContextProvider = ({ children }) => {
 
 		if (api === "searchApi") {
 			/**** Fetch function for only Blog or News... ****/
-			return await fetch(`${searchBaseUrl}/${searchTopic}/q=${debouncedSearchTerm}&num=50`, {
+			return await fetch(`${searchBaseUrl}?query=${debouncedSearchTerm}&limit=50&related_keywords=true`, {
 				method: "GET",
 				headers: {
 					"X-User-Agent": "desktop",
@@ -29,7 +29,7 @@ export const ResultContextProvider = ({ children }) => {
 			}).then((res) => res.json());
 		} else if (api === "imageApi") {
 			/**** Fetch function for only Images... ****/
-			return await fetch(`${imageBaseUrl}/?q=${debouncedSearchTerm}&hl=en`, {
+			return await fetch(`${imageBaseUrl}?query=${debouncedSearchTerm}&region=us`, {
 				method: "GET",
 				headers: {
 					"X-RapidAPI-Host": process.env.NEXT_PUBLIC_IMAGE_API_HOST,
