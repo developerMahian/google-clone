@@ -12,8 +12,6 @@ import "lightgallery.js/dist/css/lightgallery.css";
 const ImagesTab = () => {
 	const { debouncedSearchTerm, getResults, setSearchSuggestions } = useResultContext();
 
-	if (!debouncedSearchTerm) return <EmptySearchResult />;
-
 	const { data, isLoading } = useQuery(["imageApi", debouncedSearchTerm], () => getResults("imageApi"), {
 		enabled: debouncedSearchTerm.length > 0,
 		staleTime: Infinity,
@@ -28,11 +26,10 @@ const ImagesTab = () => {
 		return () => setSearchSuggestions([]);
 	}, [data]);
 
+	if (!debouncedSearchTerm) return <EmptySearchResult />;
 	if (isLoading) return <Loading />;
 
-	const {
-		response: { images },
-	} = data;
+	const images = data?.response?.images || [];
 
 	return (
 		<section className="container p-3 pt-0 lg:px-32">
@@ -75,21 +72,19 @@ const PhotoItem = ({ imgUrl, alt, thumbUrl, pageUrl, infoText, group }) => (
     `}
 	>
 		<div className="relative min-h-[100px] group cursor-pointer">
+			{/* eslint-disable-next-line @next/next/no-img-element */}
 			<img
-				src={imgUrl}
 				alt={alt}
-				onError={({ currentTarget }) => {
-					currentTarget.onerror = null; // prevents looping
-					// currentTarget.src="image_path_here";
-				}}
-				className="w-full h-full object-cover object-center rounded-lg overflow-hidden group-hover:scale-110 transition-transform duration-500 z-0"
+				src={imgUrl}
 				loading="lazy"
+				className="w-full h-full object-cover object-center rounded-lg overflow-hidden group-hover:scale-110 transition-transform duration-500 z-0"
+				onError={({ currentTarget }) => {
+					currentTarget.onerror = null;
+				}}
 			/>
 
 			<div className="absolute block left-0 bottom-0 w-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-black/30 backdrop-blur z-10">
-				<p className="text-center text-sm font-medium py-1.5 px-2">
-					{infoText.length > 60 ? infoText.substring(0, 60) + "..." : infoText}
-				</p>
+				<p className="text-center text-sm font-medium py-1.5 px-2">{infoText.length > 60 ? infoText.substring(0, 60) + "..." : infoText}</p>
 			</div>
 		</div>
 	</LightgalleryItem>

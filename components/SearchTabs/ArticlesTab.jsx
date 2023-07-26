@@ -1,47 +1,45 @@
 import { useEffect, useState } from "react";
 import { useQuery } from "react-query";
-import { useResultContext } from "../../context/ResultContextProvider";
-import Loading from "../Loading";
 import propTypes from "prop-types";
-import Pagination from "../Pagination";
+
+import { useResultContext } from "../../context/ResultContextProvider";
 import EmptySearchResult from "../EmptySearchResult";
-// import { searchData as data } from "../../staticApiData/searchData";
+import Pagination from "../Pagination";
+import Loading from "../Loading";
 
 const ArticlesTab = () => {
 	const { debouncedSearchTerm, getResults, setSearchSuggestions } = useResultContext();
 
-	if (!debouncedSearchTerm) return <EmptySearchResult />;
-
-	const { data, isLoading } = useQuery(
-		["blogSearch", debouncedSearchTerm],
-		() => getResults("searchApi", "search"),
-		{
-			enabled: debouncedSearchTerm.length > 0,
-			staleTime: Infinity,
-		}
-	);
+	const { data, isLoading } = useQuery(["blogSearch", debouncedSearchTerm], () => getResults("searchApi", "search"), {
+		enabled: debouncedSearchTerm.length > 0,
+		staleTime: Infinity,
+	});
 
 	console.info({ isLoading, data });
 
 	useEffect(() => {
 		setSearchSuggestions(data?.answers || []);
-
 		return () => setSearchSuggestions([]);
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [data]);
 
+	if (!debouncedSearchTerm) return <EmptySearchResult />;
 	if (isLoading) return <Loading />;
-
-	// return <>Shit</>;
 
 	const { results, ts } = data;
 
 	return (
-		<section className="container sm:px-5 lg:px-40">
-			<span className="inline-block text-xs tracking-wide mt-2 mb-6">
-				About {results?.length} results in {(ts / 10).toFixed(2)} seconds
-			</span>
-
-			<ArticlesCollection results={results} />
+		<section className="container sm:px-5 lg:px-40 pt-2">
+			{results?.length > 0 ? (
+				<>
+					<span className="inline-block text-xs tracking-wide">
+						About {results?.length} results in {(ts / 10).toFixed(2)} seconds
+					</span>
+					<ArticlesCollection results={results} />
+				</>
+			) : (
+				<span className="inline-block text-xs tracking-wide">No results found..</span>
+			)}
 		</section>
 	);
 };
@@ -55,30 +53,26 @@ const ArticlesCollection = ({ results }) => {
 	const itemsPerPage = 10;
 	const itemsVisited = pageNumber * itemsPerPage;
 
-	const displayItems = results.slice(itemsVisited, itemsVisited + itemsPerPage);
+	const displayItems = results?.slice(itemsVisited, itemsVisited + itemsPerPage);
 
-	return (
-		<div className="flex flex-col gap-10 max-w-2xl mb-6">
+	return results?.length > 0 ? (
+		<div className="flex flex-col gap-10 max-w-2xl my-6">
 			{displayItems?.map(
 				({ link, title, description }, index) =>
 					description && (
 						<div key={index}>
 							<a href={link} className="inline-block group" target="_blank" rel="noreferrer">
-								<span className="text-sm">
-									{link.length > 30 ? link.substring(0, 30) : link}
-								</span>
-								<h1 className="text-sky-600 dark:text-sky-300 text-lg sm:text-xl group-hover:underline underline-offset-4">
-									{title}
-								</h1>
+								<span className="text-sm">{link.length > 30 ? link.substring(0, 30) : link}</span>
+								<h1 className="text-sky-600 dark:text-sky-300 text-lg sm:text-xl group-hover:underline underline-offset-4">{title}</h1>
 							</a>
 							<p className="text-base mt-2">{description}</p>
 						</div>
 					)
 			)}
 
-			<Pagination results={results} itemsPerPage={itemsPerPage} setPageNumber={setPageNumber} />
+			<Pagination {...{ results, itemsPerPage, setPageNumber }} />
 		</div>
-	);
+	) : null;
 };
 
 ArticlesCollection.propTypes = {
